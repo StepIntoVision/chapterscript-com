@@ -10,7 +10,8 @@ immersive, interactive spatial experiences) and the **ChapterPlayer** runtime
 (the open source Swift runtime that plays them on Apple Vision Pro).
 
 Pure static HTML/CSS/JS. No build step, no framework, no package.json. Google
-Fonts is the only external dependency. Deploys to GitHub Pages (`CNAME` +
+Fonts is the only external dependency. Deploys to GitHub Pages from
+StepIntoVision/chapterscript-com (moved from mike-bundy 2026-11-04; `CNAME` +
 `.nojekyll` are load-bearing). Served locally by Laravel Herd (from ~/www) at
 http://chapterscript.test. All links are root-relative.
 
