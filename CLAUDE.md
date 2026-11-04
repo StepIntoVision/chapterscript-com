@@ -11,7 +11,7 @@ immersive, interactive spatial experiences) and the **ChapterPlayer** runtime
 
 Pure static HTML/CSS/JS. No build step, no framework, no package.json. Google
 Fonts is the only external dependency. Deploys to GitHub Pages (`CNAME` +
-`.nojekyll` are load-bearing). Served locally by Laravel Herd at
+`.nojekyll` are load-bearing). Served locally by Laravel Herd (from ~/www) at
 http://chapterscript.test. All links are root-relative.
 
 Sister sites, each with its own look (do not borrow their themes):
@@ -52,8 +52,9 @@ no logo image.
   request). The two-word documentary title is fine; the one-word internal
   codename above is not.
 - Do not invent APIs, license names, version numbers, or benchmark claims.
-- GitHub links point at https://github.com/mike-bundy/ChapterScript and
-  .../ChapterPlayer (live repos, exact casing).
+- GitHub links point at https://github.com/StepIntoVision/ChapterScript and
+  .../ChapterPlayer (live repos, exact casing; moved from mike-bundy 2026-11-04,
+  the old URLs redirect).
 - Reference content on /format.html and /player.html was verified against the
   actual packages in ~/code/ChapterScript and ~/code/ChapterPlayer (2026-08-12).
   When the format or runtime changes, re-verify against the source before
@@ -79,7 +80,7 @@ stories".
 ## Verification (run after any change)
 
 ```bash
-cd ~/Herd/chapterscript
+cd ~/www/chapterscript
 
 # no forbidden strings (must print nothing)
 grep -rni "chapter vision\|chapter studio\|vision studio\|sharedvisions\|afterburn\|maestrokit\|chapterengine" \
