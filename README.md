@@ -1,6 +1,6 @@
 # chapterscript.com
 
-The home of two open source projects by [Implement](https://implement.studio):
+The home of two open source projects by [Step Into Vision](https://stepinto.vision):
 the **ChapterScript** format and the **ChapterPlayer** runtime.
 
 Pure static site. No build step, no framework, no package.json. The only

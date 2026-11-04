@@ -5,7 +5,7 @@ Guidance for Claude Code when working in this repository.
 ## What this is
 
 **chapterscript.com**, the developer-facing home of two open source projects by
-the studio **Implement**: the **ChapterScript** format (an open JSON format for
+**Step Into Vision** (https://stepinto.vision): the **ChapterScript** format (an open JSON format for
 immersive, interactive spatial experiences) and the **ChapterPlayer** runtime
 (the open source Swift runtime that plays them on Apple Vision Pro).
 
@@ -42,8 +42,9 @@ no logo image.
 - **Maestro appears in exactly one place**: the homepage footer link "Maestro,
   the authoring suite" → maestrostud.io (restored 2026-08-12 by request). No
   other Maestro mentions or maestrostud.io links anywhere; page copy stands
-  alone as the open source home, with the footer "An Implement project"
-  linking implement.studio.
+  alone as the open source home, with the footer "A Step Into Vision project"
+  linking stepinto.vision (was Implement until 2026-11-04; the repos live in
+  the StepIntoVision GitHub org).
 - NEVER use these strings anywhere: "Chapter Vision", "Chapter Studio",
   "Vision Studio", "SharedVisions" (one word), "Afterburn", "MaestroKit",
   "chapterengine".
