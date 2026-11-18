@@ -1,0 +1,6 @@
+.DS_Store
+private/
+.env
+.env.*
+*.sql.gz
+*.sql.zip

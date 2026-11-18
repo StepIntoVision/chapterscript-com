@@ -37,6 +37,7 @@
       <nav class="nav-links" aria-label="Site">
         <a href="/format.html">Format</a>
         <a href="/player.html">Player</a>
+        <a href="#early-access">Get in touch</a>
         <a class="btn btn-ghost" href="https://github.com/StepIntoVision/ChapterScript">
           <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
           GitHub
@@ -322,6 +323,180 @@
         </div>
       </div>
     </section>
+    <section class="access section" id="early-access" aria-labelledby="access-title">
+      <div class="access-inner">
+        <header class="access-head section-head reveal">
+          <h2 id="access-title">Have a story in mind?</h2>
+          <p class="access-lede">Tell us who you are and what you want to make with ChapterScript and ChapterPlayer.</p>
+        </header>
+
+        <form class="form reveal" id="access-form" method="POST"
+              action="/api/early-access.php"
+              data-endpoint="/api/early-access.php">
+          <div class="hp" aria-hidden="true">
+            <label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <!-- 01 -->
+          <fieldset class="fs">
+            <legend class="fs-legend"><span class="fs-no">01</span>You</legend>
+            <div class="grid-2">
+              <div class="field">
+                <label for="f-name">Name</label>
+                <input id="f-name" name="name" maxlength="150" type="text" autocomplete="name" required aria-describedby="e-name">
+                <p class="err" id="e-name" hidden>Tell us what to call you.</p>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" maxlength="254" type="email" autocomplete="email" inputmode="email" required aria-describedby="e-email">
+                <p class="err" id="e-email" hidden>We'll need an email address that works.</p>
+              </div>
+              <div class="field">
+                <label for="f-org">Studio or organization <i>optional</i></label>
+                <input id="f-org" name="organization" maxlength="200" type="text" autocomplete="organization">
+              </div>
+              <div class="field">
+                <label for="f-web">Website or portfolio <i>optional</i></label>
+                <input id="f-web" name="website" maxlength="500" type="text" inputmode="url" autocomplete="url" placeholder="yourstudio.com" spellcheck="false">
+              </div>
+            </div>
+
+            <fieldset class="field chips-field">
+              <legend>What best describes you?</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="role" value="Director or filmmaker"><span>Director or filmmaker</span></label>
+                <label class="chip"><input type="radio" name="role" value="Producer"><span>Producer</span></label>
+                <label class="chip"><input type="radio" name="role" value="Artist or designer"><span>Artist or designer</span></label>
+                <label class="chip"><input type="radio" name="role" value="Developer"><span>Developer</span></label>
+                <label class="chip"><input type="radio" name="role" value="Educator"><span>Educator</span></label>
+                <label class="chip"><input type="radio" name="role" value="Museum or cultural institution"><span>Museum or cultural</span></label>
+                <label class="chip"><input type="radio" name="role" value="Brand or agency"><span>Brand or agency</span></label>
+                <label class="chip"><input type="radio" name="role" value="Something else"><span>Something else</span></label>
+              </div>
+            </fieldset>
+          </fieldset>
+
+          <!-- 02 -->
+          <fieldset class="fs">
+            <legend class="fs-legend"><span class="fs-no">02</span>Your setup</legend>
+
+            <div class="grid-2 grid-2-chips">
+              <fieldset class="field chips-field">
+                <legend>Do you have an Apple Vision Pro?</legend>
+                <div class="chips">
+                  <label class="chip"><input type="radio" name="vision_pro" value="Yes"><span>Yes</span></label>
+                  <label class="chip"><input type="radio" name="vision_pro" value="Planning to get one"><span>Planning to</span></label>
+                  <label class="chip"><input type="radio" name="vision_pro" value="Not yet"><span>Not yet</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="field chips-field">
+                <legend>Which Mac do you work on?</legend>
+                <div class="chips">
+                  <label class="chip"><input type="radio" name="mac" value="Apple silicon"><span>Apple silicon</span></label>
+                  <label class="chip"><input type="radio" name="mac" value="Intel"><span>Intel</span></label>
+                  <label class="chip"><input type="radio" name="mac" value="No Mac yet"><span>No Mac yet</span></label>
+                </div>
+              </fieldset>
+            </div>
+
+            <fieldset class="field chips-field">
+              <legend>Have you released anything for Apple Vision Pro?</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="shipped" value="Yes, it's out"><span>Yes, it's out</span></label>
+                <label class="chip"><input type="radio" name="shipped" value="In progress"><span>In progress</span></label>
+                <label class="chip"><input type="radio" name="shipped" value="Not yet"><span>Not yet</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field chips-field">
+              <legend>What do you create with today? <i>pick any</i></legend>
+              <div class="chips">
+                <label class="chip"><input type="checkbox" name="tools[]" value="Reality Composer Pro"><span>Reality Composer Pro</span></label>
+                <label class="chip"><input type="checkbox" name="tools[]" value="Unity"><span>Unity</span></label>
+                <label class="chip"><input type="checkbox" name="tools[]" value="Unreal Engine"><span>Unreal Engine</span></label>
+                <label class="chip"><input type="checkbox" name="tools[]" value="Blender"><span>Blender</span></label>
+                <label class="chip"><input type="checkbox" name="tools[]" value="Final Cut Pro"><span>Final Cut Pro</span></label>
+                <label class="chip"><input type="checkbox" name="tools[]" value="DaVinci Resolve"><span>DaVinci Resolve</span></label>
+                <label class="chip"><input type="checkbox" name="tools[]" value="Premiere Pro or After Effects"><span>Premiere or After Effects</span></label>
+                <label class="chip"><input type="checkbox" name="tools[]" value="Something else"><span>Something else</span></label>
+              </div>
+            </fieldset>
+          </fieldset>
+
+          <!-- 03 -->
+          <fieldset class="fs">
+            <legend class="fs-legend"><span class="fs-no">03</span>Your story</legend>
+
+            <fieldset class="field chips-field">
+              <legend>What would you make with ChapterScript? <i>pick any</i></legend>
+              <div class="chips">
+                <label class="chip"><input type="checkbox" name="making[]" value="Narrative story"><span>Narrative story</span></label>
+                <label class="chip"><input type="checkbox" name="making[]" value="Immersive film"><span>Immersive film</span></label>
+                <label class="chip"><input type="checkbox" name="making[]" value="Documentary"><span>Documentary</span></label>
+                <label class="chip"><input type="checkbox" name="making[]" value="Education or training"><span>Education or training</span></label>
+                <label class="chip"><input type="checkbox" name="making[]" value="Museum or exhibition"><span>Museum or exhibition</span></label>
+                <label class="chip"><input type="checkbox" name="making[]" value="Live event or performance"><span>Live event or performance</span></label>
+                <label class="chip"><input type="checkbox" name="making[]" value="Brand experience"><span>Brand experience</span></label>
+                <label class="chip"><input type="checkbox" name="making[]" value="Something else"><span>Something else</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="f-story">Tell us your story</label>
+              <textarea id="f-story" name="story" rows="5" maxlength="3000" required
+                        placeholder="The idea, who it's for, and where it's at. A few lines is plenty."
+                        aria-describedby="e-story c-story"></textarea>
+              <div class="field-foot">
+                <p class="err" id="e-story" hidden>A sentence or two about what you want to make helps us a lot.</p>
+                <span class="count" id="c-story" aria-live="off">0 / 3000</span>
+              </div>
+            </div>
+
+            <div class="grid-2 grid-2-chips">
+              <fieldset class="field chips-field">
+                <legend>When would you like to start?</legend>
+                <div class="chips">
+                  <label class="chip"><input type="radio" name="timeline" value="Right away"><span>Right away</span></label>
+                  <label class="chip"><input type="radio" name="timeline" value="In the next few months"><span>In a few months</span></label>
+                  <label class="chip"><input type="radio" name="timeline" value="Just exploring"><span>Just exploring</span></label>
+                </div>
+              </fieldset>
+              <div class="field">
+                <label for="f-heard">How did you hear about ChapterScript? <i>optional</i></label>
+                <input id="f-heard" name="heard_about" maxlength="300" type="text">
+              </div>
+            </div>
+
+            <label class="check">
+              <input type="checkbox" name="updates" value="Yes">
+              <span class="check-box" aria-hidden="true"></span>
+              <span>Also send me the occasional note about ChapterScript</span>
+            </label>
+          </fieldset>
+
+          <div class="submit-row">
+            <button class="btn btn-primary btn-submit" type="submit" id="submit">
+              <span class="btn-label">Tell us your story</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="fine">We only use this to talk with you about ChapterScript.</p>
+          </div>
+
+          <div class="form-error" id="form-error" role="alert" hidden>
+            <p><b>That didn't send.</b> <span id="form-error-message">Your answers are still here. Please try again.</span></p>
+            <div class="form-error-actions">
+              <button class="btn btn-ghost btn-small" type="submit">Try again</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="sent" id="sent" tabindex="-1" hidden>
+          <p class="sent-mark wordmark" aria-hidden="true">ChapterScript</p>
+          <h3>Thank you<span id="sent-name"></span>.</h3>
+          <p>Your story has been received. Your email: <b id="sent-email">your inbox</b>.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -335,5 +510,6 @@
   </footer>
 
   <script src="/assets/js/site.js"></script>
+  <script src="/assets/js/early-access.js"></script>
 </body>
 </html>
