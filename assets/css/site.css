@@ -201,15 +201,21 @@ code, kbd, pre { font-family: var(--font-mono); }
   margin-bottom: 1.25rem;
 }
 
-.hero-sub {
-  color: var(--dim);
-  max-width: 44rem;
-  font-size: 1.15rem;
-  margin-bottom: 2.25rem;
+.hero-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
-
-.hero-sub strong { color: var(--ink); font-weight: 600; }
-
+.hero-projects section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 1px solid var(--border-strong);
+  padding-top: 1.25rem;
+}
+.hero-projects p { max-width: 42ch; margin: 0.65rem 0 1.25rem; color: var(--dim); }
+.hero-projects .hero-ctas { margin-top: auto; }
 .hero-ctas { display: flex; gap: 0.85rem; flex-wrap: wrap; }
 
 /* ---------- Sections ---------- */
@@ -503,7 +509,9 @@ html.reveal-enabled .reveal.in {
 }
 
 @media (max-width: 640px) {
-  .nav-links a:not(.btn) { display: none; }
+  .nav-inner { height: auto; min-height: 4rem; flex-wrap: wrap; gap: 0.25rem 1rem; padding-block: 0.65rem; }
+  .nav-links { gap: 0.75rem; }
+  .hero-projects { grid-template-columns: 1fr; }
   .hero { padding: 4.5rem 0 3.5rem; }
   .section { padding: 3.5rem 0; }
   .concepts, .features, .spec-links, .repos { grid-template-columns: 1fr; }
