@@ -230,7 +230,7 @@ function respond(int $status, string $message, bool $json, array $errors = [], a
     header('Content-Type: text/html; charset=utf-8');
     $ok = $status === 200;
     echo '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
-        . '<title>Get in touch — ChapterScript</title><link rel="stylesheet" href="/assets/css/site.css">'
+        . '<title>Get in touch — ChapterScript</title><link rel="stylesheet" href="/assets/css/site.css?v=20261118-2">'
         . '<main class="access section"><div class="access-inner"><h1>' . ($ok ? 'Thank you.' : 'Your request was not saved.') . '</h1><p>' . escape($message) . '</p>';
     if (!$ok && $input) {
         echo '<form class="form" method="post" action="/api/early-access.php">';
@@ -260,7 +260,7 @@ function respond(int $status, string $message, bool $json, array $errors = [], a
         }
         echo '<label><input type="checkbox" name="updates" value="Yes"' . (($input['updates'] ?? '') === 'Yes' ? ' checked' : '')
             . '> Also send me the occasional note about ChapterScript</label>'
-            . '<div class="hp" aria-hidden="true"><label>Leave this empty <input name="_honey" tabindex="-1" autocomplete="off"></label></div>'
+            . '<div class="hp" hidden aria-hidden="true"><label>Leave this empty <input name="_honey" tabindex="-1" autocomplete="off"></label></div>'
             . '<div class="submit-row"><button class="btn btn-primary" type="submit">Try again</button></div></form>';
     }
     echo '<p><a href="/#early-access">Back to ChapterScript</a></p></div></main></html>';

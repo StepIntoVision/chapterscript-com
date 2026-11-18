@@ -678,13 +678,16 @@ html.reveal-enabled .reveal.in {
 /* ---------- Contact form ---------- */
 [hidden] { display: none !important; }
 .access-inner { max-width: 880px; margin: 0 auto; padding: 0 1.5rem; }
-.access-lede { max-width: 60ch; }
-.form, .sent { position: relative; padding: clamp(20px, 4vw, 40px); border: 1px solid var(--border-strong); border-radius: var(--radius); background: var(--panel); }
+.access-head { margin: 0 auto clamp(2rem, 5vw, 4rem); text-align: center; }
+.access-head h2 { font-size: clamp(2rem, 5vw, 4rem); text-wrap: balance; }
+.access-lede { max-width: 48ch; margin-inline: auto; text-wrap: balance; }
+.form, .sent { position: relative; padding: clamp(20px, 4vw, 52px); border: 1px solid var(--border-strong); border-radius: var(--radius); background: var(--panel); }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .fs, .field { min-width: 0; border: 0; padding: 0; margin: 0; }
-.fs + .fs { margin-top: 40px; }
-.fs-legend { width: 100%; margin-bottom: 24px; font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; }
-.fs-no { margin-right: 12px; color: var(--mint); font-family: var(--font-mono); font-size: .85rem; }
+.fs + .fs { margin-top: clamp(36px, 5vw, 52px); }
+.fs-legend { display: flex; align-items: baseline; gap: 12px; width: 100%; margin-bottom: 24px; font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; }
+.fs-legend::after { content: ""; flex: 1; align-self: center; height: 1px; background: var(--border-strong); }
+.fs-no { color: var(--mint); font-family: var(--font-mono); font-size: .85rem; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .grid-2 + .field, .field + .field, .field + .grid-2, .grid-2 + .grid-2, .field + .check { margin-top: 26px; }
 .form .grid-2 > .field { margin-top: 0; }
@@ -703,7 +706,7 @@ html.reveal-enabled .reveal.in {
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { position: relative; display: inline-flex; max-width: 100%; }
 .chip input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
-.chip span { padding: 8px 12px; border: 1px solid var(--border-strong); border-radius: 6px; color: var(--dim); font-size: .875rem; }
+.chip span { padding: 8px 14px; border: 1px solid var(--border-strong); border-radius: 999px; color: var(--dim); font-size: .875rem; }
 .chip:hover span { color: var(--ink); border-color: var(--dim); }
 .chip input:checked + span { background: var(--mint-dim); border-color: var(--mint); color: var(--ink); }
 .chip input:focus-visible + span { outline: 2px solid var(--mint); outline-offset: 2px; }
